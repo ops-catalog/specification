@@ -5,6 +5,7 @@ repo_url: "https://github.com/open-catalog-alliance/specification"
 repo_name: "open-catalog-alliance/specification"
 
 nav:
+    - index.md
     - Setup: []
     - Issues:
         - 'Tracker': 'https://github.com/open-catalog-alliance/specification/issues'
@@ -22,13 +23,6 @@ markdown_extensions:
   toc:
     permalink: True
   sane_lists: {}
-
-plugins:
-  - search:
-      min_search_length: 3
-      prebuild_index: True
-      indexing: 'full'
-      separator: '[\s\-\.]+'
 
 
 theme:
