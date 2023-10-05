@@ -1,0 +1,42 @@
+---
+site_name: Open Catalog
+site_url: https://github.com/open-catalog-alliance
+repo_url: "https://github.com/open-catalog-alliance/specification"
+repo_name: "open-catalog-alliance/specification"
+
+nav:
+    - Setup: []
+    - Issues:
+        - 'Tracker': 'https://github.com/open-catalog-alliance/specification/issues'
+
+docs_dir: "docs"
+site_dir: "site"
+
+extra_css:
+  - styles/css/global.css
+use_directory_urls: true
+dev_addr: '127.0.0.1:8000'
+
+markdown_extensions:
+  smarty: {}
+  toc:
+    permalink: True
+  sane_lists: {}
+
+plugins:
+  - search:
+      min_search_length: 3
+      prebuild_index: True
+      indexing: 'full'
+      separator: '[\s\-\.]+'
+
+
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+      - yaml
+      - scala
+  logo: assets/images/oca.svg
+  favicon: assets/images/oca.svg
+
