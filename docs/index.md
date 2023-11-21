@@ -1,84 +1,95 @@
-### App Catalog
+### Ops Catalog
 
-App catalog is a modern collaborative catalog solution designed to collect
+Ops catalog is a modern collaborative catalog solution designed to collect
 and make software engineering system metadata available for consumer apps
 to facilitate various automation tasks in the area of DevOps.
 
-### What are the problems?
+### Problems
+A handful of problems are shared here as to how efficiency has been impacted in the operations space.
 
-- Modern Applications require new types of attributes for facilitating tooling
-- The system does not need to be complex to use it
-- The system needs to support more than data entry
-- An API first strategy is required to democratise system metadata
-- No single approach for App Team, Infra Team and Ops Team
-- Traditional Config Management applications are heavy on audit and light on useful data
-- Each DevOps tool manages or discovers metadata using their own requirements thus causing duplication and drift
+#### Owner Identification is hard
+Identifying Asset Owners is a challenging task. Often times we have a problem with an application, a system or an appliance and it takes a long time to get to the owner and to discuss the issue and seek help.
 
-### How does App Catalog solve it?
+#### Lack of attributes for New Application Workflows
+Modern application workflows demand new attributes which are accessible to streamline tooling.
 
-App Catalog supports collaborative data gathering for software teams. You can start with a contract first or obtain the
-current
-state of the world using discovery modules. The API supports read and write operations for modules while allowing
-powerful search
-to get graph of related entries.
+#### Obscure and Inaccessible
+Ease of use is a priority and complexity is not a necessity. Not only are new attributes missing, existing ones are hard to get access, retrieve and integrate with.
 
-It opens up opportunities to declare once and use the contract across suite of devops tools. Teams can
-uncover new workflows not used before to solve audit, dev productivity and quality gates while making it fun
-for teams with leaderboard.
+#### Lack of an open approach
+No single consistent approach exists for system data collection for App Team, Infra Team and Ops Team. Operational configuration often resides as tribal knowledge among developers, making it invisible to operations.
+
+#### Lack of context
+Enterprise-wide initiatives are great ideas and are meant to solve specific problems. However, they do not integrate with team specific data and processes and the data available in them stays high level. Making decisions using the outdated data or context can be inefficient and this also hides the inherent risk to the business.
+
+
+### How does Ops Catalog solve it?
+
+Ops Catalog supports collaborative data gathering for software teams. You can start with a contract first or obtain the current state of the world using discovery modules. The API supports read and write operations for modules while allowing powerful search to get graph of related entries.
 
 It provides approach for declaring once and utilising the contract across a suite of DevOps tools.
-Teams can discover novel workflows that haven't been employed previously, addressing audit, development productivity,
-and quality gates.
-All the while, it adds an element of fun and collaboration for teams through the built-in scorecard and leaderboard
-mechanism.
+Teams can discover novel workflows that haven't been employed previously, addressing audit, development productivity and quality gates. All the while, it adds an element of fun and collaboration for teams through the built-in scorecard and leaderboard mechanism.
 
 ### The major components
 
-There are six major categories of attributes in a catalog item.
+There are eight major categories of attributes in a catalog item.
 
 | Category       | Description                                                                                                               |
 |----------------|---------------------------------------------------------------------------------------------------------------------------|
 | Metadata       | Catalog Item name, a few key attributes and various options to add additional data in the form of labels and annotations. |
-| Roles          | Ownership and Collaborator details along with role they play for the catalog item.                                        |
+| Contact        | Ownership and Collaborator details along with role they play for the catalog item.                                        |
+| Properties     | Properties associated with catalog item                                                                                   |
 | Links          | Collection of external links by intent - eg source, quality, test, build                                                  |
-| Usage          | Information on upstream, downstream and dependency on resource                                                            |
+| Dependencies   | Information on upstream, downstream and dependency on resources                                                            |
 | Classification | A collection of attributes to categorise the catalog item                                                                 |
 | Runtime        | Information on entry points, key URIs and augmentation of discovered data                                                 |
+| Audit          | Audit Log about information captured in this catalog item                                                                 |
+
+#### Versioning
+Ops Catalog Spec uses the kind and version attribute made popular by Kubernetes to specify the object type and apiVersion.
+
+```yaml
+apiVersion: "v1"
+kind: Component
+metadata: {}
+```
 
 #### Metadata
 
 The metadata section of the document contains the following key attributes.
 
-| Attribute Name        | Description                                                                      |
-|-----------------------|----------------------------------------------------------------------------------|
-| name                  | Name of the catalog item                                                         |
-| description           | Text describing the catalog item                                                 |
-| labels                | A map structure that can hold custom attributes to tag this artifact with        |
-| labels.tier           | This attribute denotes the catalog runtime tier                                  |
-| labels.internetFacing | Attribute that tells us whether the catalog item is accessible from the Internet |
-| annotations           | A map structure that can hold additional enrichment data                         |                  |
-| language              | Language in which this artifact was coded, if applicable                         |
-| logo                  | Catalog item logo name or location                                               |
-| contact               | Id that can be used to contact the owners of this catalog item for support       | 
+| Attribute Name         | Description                                                                                  |
+|------------------------|----------------------------------------------------------------------------------------------|
+| name                   | Name of the catalog item                                                                     |
+| description            | Text describing the catalog item                                                             |
+| labels                 | A map structure that can hold custom attributes to tag this artifact with                    |
+| tier            | This attribute records the priority of the catalog entry in terms of urgency values Tier 1-5 |
+| layer           | This attribute denotes the catalog runtime tier                                              |
+| annotations            | A map structure that can hold additional enrichment data                                     |                  |
+| logo                   | Catalog item logo name or location                                                           |
+| contact                | Id that can be used to contact the owners of this catalog item for support                   | 
 
-THe below yaml snippet shows an example metadata section of a catalog item.
+```tier```, ```contact``` and ```layer``` are automatically copied by the implementation as attributes under labels. This helps pass this information to other DevOps processes (eg. Deployment) and the same information can be used for search.
+
+The below yaml snippet shows an example metadata section of a catalog item.
 
 ```yaml
 metadata:
   name: "user-service"
   description: "This microservice provides customer information"
   labels:
-    tier: web
-    internetFacing: true
+    internet-facing: true
   annotations: { }
+  tier: 1
+  layer: web  
   language: go
   logo: "user-service.svg"
   contact: "user-service@example.io"
 ```
 
-#### Roles
+#### Contact
 
-There can be a number of roles, a team or an individual can play with regards to the maintenance of a project.
+There can be a number of contacts, a team or an individual can play with regards to the maintenance of a project.
 While there can be a single owner from accountability perspective, a catalog item
 can have many contributors playing different roles.
 
@@ -93,16 +104,16 @@ formats.
 | team         | web-team        | team://web-team                         |
 | group        | [approvergroup] | group://approvergroup                   |
 | email        | web@company.com | email://web@company.com                 |
-| chat channel | #slackChannel   | slack:slackChannel, mattermost:channel2 |
+| chat channel | #slackChannel   | slack://slackChannel, mattermost://channel2 |
 | phone        | +6189209999     | tel://+6189209999, mob://+6189209999    |
 
 As there can be a variety of ID providers and chat providers, an ```IDProviderConfig``` object can be specified 
 to specify the defaults. 
 
-The below yaml snippet shows roles configuration example for a catalog item.
+The below yaml snippet shows contact configuration example for a catalog item.
 
 ```yaml 
-roles:
+contact:
   owner:
     id: "@user1"
   contributors:
@@ -112,29 +123,119 @@ roles:
     - id: "#slackChannel"
     - id: "mattermost://web-support"
     - id: "+6189209999"
-  approvers:
+  participants:
     - id: "[CodeApprovers]"
       intent: "approvers"
     - id: "some-team"
       intent: "maintenance"
+    - id: "leadership"
+      intent: "stakeholders"
 ```
+
+#### Properties
+While catalog metadata could be used to store associated properties, a dedicated section helps with clarity and access. It is because of this reason, the recommended way to 
+store properties is by using the ```properties``` attribute.
+
+To ensure compatibility with industry trend around specifying config under annotations, this version of the specification also supports the annotation mode.
+
+The following seven namespaces are recognized and this means that the API and tooling around the specification should support operations for these namespaces:
+
+| Namespaces  | Description                                                                   |
+|-------------|-------------------------------------------------------------------------------|
+| lifecycle   | List of config properties describing the catalog item's lifecycle and actions |
+| build       | List of config properties used by build tools                                 |
+| dev         | List of attributes for dev mode like local runs, tests and one-liner command  |
+| operations     | List of attributes associated with runtime state of this catalog item         |
+| preferences | List of flags one might require for this catalog item                         |
+| resources   | A resource namespace can be used to highlight resource specific requirements  |
+| custom      | Where basic tooling support is required for uncategorised properties          |
+
+The below snippet shows properties provided as annotation under each recognised namespace. The annotation keys are prefixed with <namespace>.ops.catalog/  
+
+```yaml
+metadata:
+  annotations:
+    lifecycle.ops.catalog/git: "managed"
+    lifecycle.ops.catalog/status: "active"
+    lifecycle.ops.catalog/source-template: "microservices-starter"
+    lifecycle.ops.catalog/quality-gate: "true"
+    lifecycle.ops.catalog/framework: "spring-boot"
+    lifecycle.ops.catalog/language: "java"
+    
+    build.ops.catalog/docker: "true"
+    build.ops.catalog/gradle-wrapper: "true"
+    build.ops.catalog/command: "./gradlew clean build"
+    
+    dev.ops.catalog/quickstart: "./gradlew runApp"
+    dev.ops.catalog/local-run: "docker-compose up -d"
+    dev.ops.catalog/test: "./gradlew clean build"
+    
+    operations.ops.catalog/idempotent: yes
+    operations.ops.catalog/cron: "0 * * * *"
+    
+    resources.ops.catalog/profile: "cpu-medium"
+    resources.ops.catalog/deploy: { cpu: 0.5, memory: "512m", class: "medium" }
+    
+    preferences.ops.catalog/show-login: "false"
+    custom.ops.catalog/http-requests: {"timeout": 10s, "verify-tls": "true"}
+```
+
+Specification using properties attribute.
+```yaml
+properties:
+  lifecycle:
+    git: "managed"
+    status: "active"
+    source-template: "microservices-starter"
+    quality-gate: "true"
+  dev:
+    quickstart: "./gradlew runApp"
+    local-run: "docker-compose up -d"
+  build:
+    docker: "true"
+    gradle-wrapper: "true"
+    command: "./gradlew clean build"
+  operations:
+    idempotent: "yes"
+    cron: "0 * * * *"
+  preferences:
+    show-login: false
+  custom:
+    http-requests: 
+      timeout: 10s
+      verify-tls: true
+```
+
+In the diagram below, attributes such as source template and status are properties under the lifecycle scope.
+![lifecycle attributes](assets/images/lifecycle-attributes.svg)
+
+
+If there is a conflict, configuration specified under properties attribute will override the ones in annotations. While the implementation can perform a merge operation, 
+it is recommended to stick to one of the two approaches to avoid surprises.
 
 #### Links
 An item can have many different concerns housed in other systems. We can collect required information using the link object array.
 
 To allow for extension and multiple links for similar intent, the type attribute can have classifier suffix as shown in the table below.
 
-| Link Type      | Description                                                                                  |
-|----------------|----------------------------------------------------------------------------------------------|
-| source         | Specify location from which source can be retrieved                                          |
-| artifact       | Location of the artifact. When a classifier is not provided, it will be estimated.           |
-| artifact/image | Location of the container Image                                                              |
-| artifact/jar   | Jar Artifact                                                                                 |
-| contract       | Location where contract is located. When a classifier is not provided, it will be estimated. |
-| contract/api   | API contract location                                                                        |
-| contract/data  | Data contract location                                                                       |
-| build          | Location of the build associated with this catalog item                                      |
-| docs           | Various docs associated with the catalog item                                                | 
+| Link Type         | Description                                                                                  |
+|-------------------|----------------------------------------------------------------------------------------------|
+| source            | Specify location from which source can be retrieved                                          |
+| artifact          | Location of the artifact. When a classifier is not provided, it will be estimated.           |
+| artifact/image    | Location of the container Image                                                              |
+| artifact/jar      | Jar Artifact                                                                                 |
+| contract          | Location where contract is located. When a classifier is not provided, it will be estimated. |
+| contract/api      | API contract location                                                                        |
+| contract/data     | Data contract location                                                                       |
+| build             | Location of the build associated with this catalog item                                      |
+| docs              | Various docs associated with the catalog item                                                |
+| dashboard         | Dashboards associated with this catalog item                                                 |
+| dashboard         | Observability Dashboards associated with this catalog item                                   |
+| dashboard/logs    | Dashboards associated with this catalog item                                                 |
+| dashboard/metrics | Dashboards associated with this catalog item                                                 |
+| alerts | Alert Spec associated with this catalog item |
+| chat              | Chat channel link if available                                                               |
+| precondition | Precondition Contract or Spec for this catalog item to operate |
 
 A yaml snippet showing links configuration for a catalog item.
 
@@ -142,57 +243,88 @@ A yaml snippet showing links configuration for a catalog item.
 links:
   - type: source
     url: git@github.com:owner/abc.git
-  - type: artifact::image
+  - type: artifact/image
     url: docker://owner/abc
-  - type: artifact::jar
+  - type: artifact/jar
     url: https://artifactory/owner/abc    
   - type: contract
     url: https://site/contract.json
   - type: build
     url: https://jenkins/owner/example/build/
+  - type: chat
+    url: https://slack/myteam
   - type: docs
     url: https://readthedocs.org/example
+  - type: dashboard
+    url: https://perf-dashboard/
 ```
 
-#### Usage
+#### Dependencies
+Catalog Items often have dependencies on other items within a setup. An attribute ```upstream``` keeps track of what this application ends up consuming data from. ```downstream``` keeps track of what this item calls to share data.
+Dependencies attribute captures information about resources or technology this catalog item relies on usually using upstream and downstream data.  
 
 ```yaml 
-usage:
+dependencies:
   upstream: []
   downstream: []
-  dependencies: []
+  triggers: []
 ```
+Similarly, triggers is an array of entries which are dependent on the execution of this. ```triggers``` may be useful in a pipeline or to configure watch notifications upon changes.
+
 #### Classification
 
-Classification attributes help us filter or group assets based on their type and category they belong to. Additionally, they can be tagged
-to extend further.
+Classification attributes help us filter or group assets based on their type and category they belong to. Additionally, they can be tagged to extend further to capture cross-cutting concerns or a general topic.
 
-The classification node comprises of the following attributes:
+Let's establish the definition of what key terms like domain, capability mean in the context of ops catalog.
 
-| Name     | Description                                                                              |
-|----------|------------------------------------------------------------------------------------------|
-| type     | Type of the catalog item - usually a hardware, software or tech                          |
-| category | A sub type that further classifies the catalog item                                      |
-| tag      | An array of labels to apply to this catalog item for filtering, search, grouping purpose |
-| domain   | Domain of which this catalog item is a member of                                         | 
+##### Capability
+>> A group of product features that collectively provide a business level function. Examples of capabilities can be things like Operations, Credit Risk Assessment, Onboarding, Card Payment, Data Analytics, Client Experience.
+
+##### Domain
+>> Domain usually covers a specific area or features that a software solution aims to provide. Catalog items can be loosely clustered by domain in which a set of experts usually perform operations to minimise context switching and maximise efficiency. 
+
+The classification node consists of the following attributes:
+
+| Name       | Description                                                                              |
+|------------|------------------------------------------------------------------------------------------|
+| type       | Type of the catalog item - usually a hardware, software or tech                          |
+| tag        | An array of labels to apply to this catalog item for filtering, search, grouping purpose |
+| domain     | Domain of which this catalog item is a member of                                         | 
+| capability | A specific product capability this catalog item is a part of                             |
 
 
-The table below shows various types and categories associated with each type.
+The table below shows various kind, type and additional attributes associated with each type.
 
-| Type     | Category                         |
-|----------|----------------------------------|
-| hardware | machine, network, firewall_rule  |
-| software | app, database, storage, template |
-| tech     | framework,library,appliance      |
+| Kind              | Type                                              | Attributes                                           |
+|-------------------|---------------------------------------------------|------------------------------------------------------|
+| Component         | App, Job                                          | all                                                  |
+| Appliance         | VM, Hardware, Machine, Image                      | -dependencies                                        |
+| Store             | Disk, SFTP, NFS, Bucket, Database, Messaging      | all                                                  |
+| Technology        | Library, Framework, Language, Technology          | -dependencies                                        |
+| Pipeline          | Pipeline, Workflow                                | all, +graph                                          |
+| Resource          | Schema, Keyspace, Collection, Index, Topic, Queue, Repository | +attachment - to pick the store to use               |
+| SecurityRule      | Firewall, SecurityGroup                           | +rule - from address, to address, port, toport       |
+| SecurityRuleGroup | Firewall, SecurityGroup list                      | +rule[]                                              |
+| Infrastructure    | Infrastructure                                    | +contains - appliance, store, component              |
+| Environment       | Environment                                       | all, lifecycle.ops.catalog/schedule, lease           |
+| Capability        | Capability                                        | contains - component                                 |
+| Service           | SaaS, Jira, Confluence, Bitbucket, Kubernetes, AD | all                                                  |
+| User              | User                                              | all, lifecycle.ops.catalog/id, +membership generated |
+| Group             | Group                                             | all, +members, +roles                                |
+| Role              | Role                                              | all, +permissions                                    |
+| Provider          | IDProvider, DirectoryProvider, *Provider          | all, +attachment to pick the service to use          |
+
 
 The yaml representation of the classification object can be like this:
 
 ```yaml
+kind: Component
 classification:
-    type: "" #hardware, software, tech
-    category: ""
-    tag: []
-    domain: ""   
+    type: "App"
+    tag: ["payment", "customer"]
+    domain: "payment"
+    team: "paypaynow"
+    capability: "onlinebanking"
 ```
 
 #### Runtime
@@ -231,61 +363,149 @@ runtime:
       - test
 ```
 
+
+Implementations may choose to store this level of data in a separate storage system and show this detail only when retrieving the catalog item.
+
+### Normalisation
+An implementation of the operations catalog is advised to perform following optimisations to make the search and access process simpler.
+
+#### Copying key Attributes to labels
+
+Attributes such as layer, tier and contact can be copied to labels so the consumers can take advantage of built-in search and filter operations.
+
+before:
+```yaml
+metadata: 
+  layer: web
+  tier: 1
+  contact: "user-service@example.io"
+```
+
+after:
+```yaml
+metadata:
+  layer: web
+  tier: 1
+  contact: "user-service@example.io"
+labels:
+    core.ops.catalog/layer: web
+    core.ops.catalog/tier: 1
+    core.ops.catalog/contact: "user-service@example.io"
+```
+
+#### Adding Audit
+The catalog items may be loaded and updated at various intervals. This section shows the information on changes and source of change. This is a dynamic part of the specification and may not be populated immediately.
+
+Source attribute tells us how the catalog item was added. It can be one of api,crd,git
+
+```yaml
+audit:
+  operations:
+  - operation: "updated"
+    updated: "2023-07-01T10:00:00+1000"
+    description: "App 1 caused dependency to be updated"
+  source: api
+```
+
+#### Adding Annotations
+The attributes associated with namespaces under properties will be copied and/or merged with annotations.
+
+before:
+```yaml
+properties:
+  lifecycle:
+    source-template: "microservices-starter"
+```
+
+after:
+```yaml
+metadata:
+  annotations: 
+    lifecycle.ops.catalog/source-template: "microservices-starter"
+properties:
+  lifecycle:
+    source-template: "microservices-starter"
+```
+
 ### An Example
 
-### Resource
+An example catalog item configuration looks like this:
 
+```yaml 
+apiVersion: "v1"
+kind: Component
+metadata: 
+  name: "template"
+  description: "Template for a Component"
+  logo: "component.png"
+  contact: "template@ops.catalog"
+  labels: 
+    tier: 1
+    internet-facing: false
+    layer: web
+  annotations: {}
+includes:
+  - java-app
+  - backend-team
+contact: 
+  owner: 
+    id: "@user1"
+  contributors:
+    - id: "web-team"
+  support: 
+    - id: "#template"
+  approvers:
+    - id: "[DevExperience]"
+properties: 
+  lifecycle:
+    status: "active"
+links: 
+  - type: source
+    url: git@github.com:owner/abc.git
+  - type: artifact/image
+    url: docker://owner/abc
+  - type: artifact/jar
+dependencies: 
+  upstream: []
+  downstream: []
+  triggers: []
+runtime: 
+  endpoint:
+    - intent: entrypoint
+      location: "http://template/app"
+    - intent: "readiness"
+      location: "/ready"
+  environment:
+    - prod
+    - nonprod
+    - test
+classification: 
+    type: ""
+    tag: []
+    domain: ""
+    team: ""   
+    capability: ""
+audit: {}
 ```
-- metadata
-    - name/description
-    - labels {}
-    - annotations {}
-    - internet facing
-    - language 
-    - contact
 
-- roles:
-    - owner: team/xyz, person
-    - contributors: team/xyz
-    - support: team/abs
-    - approvers - change, maintenance
+### Includes
+While it is nice to view all the attributes associated with a catalog item in a single response. Managing a denormalised entry can be a pain. Templates help solve refactor
+your config management further to keep it tidy. Certain traits can be captured as templates and included into each catalog entry.
 
-- links {intent, id}
-    - code: source
-    - artifact
-    - contract
-    - build
-    - docs
+The following attribute can are allowed in the template specification.
 
-- usage
-    - upstream 
-    - downstream
-    - dependencies resource
+| Attribute      | Description                                                           | Action | Applicable |
+|----------------|-----------------------------------------------------------------------|--------|------------|
+| apiVersion     | every item evolves separately                                         |        | ❌          |
+| kind           | need to be specific for each item                                     |        | ❌          |
+| metadata       | can merge as many attributes can be shared                            | merged | ✅          |
+| contact        | merge is supported to allow teams to have contact in one place        | merged | ✅          |
+| properties     | merge is supported to allow multiple components to reuse properties   | merged | ✅          |
+| links          | links should be unique but there might be a case of reuse             | merged | ✅          |
+| dependencies   | should be unique. very important so do not take shortcut on this one. |        | ❌          |
+| classification | can be reused by apps in a domain, team                               | merged | ✅          |
+| runtime        | if using same framework, most attributes could be reused              | merged | ✅          |
 
-- classification
-    - type
-        - hardware - machine, network, fw rules
-        - software - app, database, storage, fw rules, template
-        - tech - framework, library, appliance
-    - category
-    - tag
-    - domain
-    
-- runtime
-    - endpoint - intent/url entrypoint, readiness, liveness, correctness
-    - environment - prod, non-prod, test etc
-
-- resource
-    - type
-    - name
-
-```
+Template will always be applied first. The more local declaration of attributes in each catalog entry will override any data template might have added. It also does not always make sense to overwrite or merge data when importing from template. The above table shows the merge strategy applied for each attribute that can be put in template.
 
 
-### Supporting Types
-
-#### Team
-
-#### User
-
-#### IDProviderConfig

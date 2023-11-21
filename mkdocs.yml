@@ -1,15 +1,18 @@
 ---
-site_name: Open Catalog
+site_name: Ops Catalog
 site_url: https://github.com/open-catalog-alliance
 repo_url: "https://github.com/open-catalog-alliance/specification"
 repo_name: "open-catalog-alliance/specification"
 
 nav:
     - index.md
+    - Examples:
+      - 'My Account': 'examples/my-account.md'
+      - 'Deployer': 'examples/deploy.md'
     - Setup: []
     - Issues:
         - 'Tracker': 'https://github.com/open-catalog-alliance/specification/issues'
-
+    - TODO.md
 docs_dir: "docs"
 site_dir: "site"
 
@@ -37,4 +40,5 @@ theme:
       - scala
   logo: assets/images/oca.svg
   favicon: assets/images/oca.svg
-
+  features:
+    - content.code.copy
