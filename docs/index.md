@@ -68,6 +68,7 @@ The metadata section of the document contains the following key attributes.
 | annotations            | A map structure that can hold additional enrichment data                                     |                  |
 | logo                   | Catalog item logo name or location                                                           |
 | contact                | Id that can be used to contact the owners of this catalog item for support                   | 
+|license                 | Applicable License for this catalog item e.g. Apache 2.0, Private, Commercial, GPL, BSD etc|
 
 ```tier```, ```contact``` and ```layer``` are automatically copied by the implementation as attributes under labels. This helps pass this information to other DevOps processes (eg. Deployment) and the same information can be used for search.
 
@@ -85,6 +86,7 @@ metadata:
   language: go
   logo: "user-service.svg"
   contact: "user-service@example.io"
+  license: "private"
 ```
 
 #### Contact
@@ -401,7 +403,7 @@ Source attribute tells us how the catalog item was added. It can be one of api,c
 ```yaml
 audit:
   operations:
-  - operation: "updated"
+  - name: "updated"
     updated: "2023-07-01T10:00:00+1000"
     description: "App 1 caused dependency to be updated"
   source: api
