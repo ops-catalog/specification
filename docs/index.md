@@ -500,7 +500,7 @@ The following attribute can are allowed in the template specification.
 |----------------|-----------------------------------------------------------------------|--------|------------|
 | apiVersion     | every item evolves separately                                         |        | ❌          |
 | kind           | need to be specific for each item                                     |        | ❌          |
-| metadata       | can merge as many attributes can be shared                            | merged | ✅          |
+| metadata       | can merge as many attributes and can be shared                            | merged | ✅          |
 | contact        | merge is supported to allow teams to have contact in one place        | merged | ✅          |
 | properties     | merge is supported to allow multiple components to reuse properties   | merged | ✅          |
 | links          | links should be unique but there might be a case of reuse             | merged | ✅          |
