@@ -87,6 +87,7 @@ paths:
           description: Invalid Request
       security: []
 
+
   /api/templates:
     get:
       tags:
@@ -94,6 +95,23 @@ paths:
       summary: Returns available template names
       description: Returns all templates in the ops catalog
       operationId: getTemplates
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CatalogItems'
+      security: []
+
+
+  /api/unresolved:
+    get:
+      tags:
+        - catalog
+      summary: Returns items with no team ownership
+      description: Returns all items not yet assigned to a team
+      operationId: getUnresolvedItems
       responses:
         "200":
           description: successful operation
