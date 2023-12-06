@@ -9,6 +9,7 @@ nav:
     - Examples:
       - 'My Account': 'examples/my-account.md'
       - 'Deployer': 'examples/deploy.md'
+    - 'Api Docs': api.md
     - Setup: []
     - Issues:
         - 'Tracker': 'https://github.com/open-catalog-alliance/specification/issues'
@@ -42,3 +43,9 @@ theme:
   favicon: assets/images/oca.svg
   features:
     - content.code.copy
+
+plugins:
+  - render_swagger:
+      allow_arbitrary_locations : true
+      javascript: ../assets/js/swagger-ui-bundle.js
+      css: ../assets/css/swagger-ui.css      
