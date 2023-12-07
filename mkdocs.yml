@@ -9,11 +9,13 @@ nav:
     - Examples:
       - 'My Account': 'examples/my-account.md'
       - 'Deployer': 'examples/deploy.md'
+    - 'Templates': 'templates.md'
     - 'Api Docs': api.md
     - Setup: []
     - Issues:
         - 'Tracker': 'https://github.com/open-catalog-alliance/specification/issues'
     - TODO.md
+    - 'FAQs': 'faqs.md'
 docs_dir: "docs"
 site_dir: "site"
 
