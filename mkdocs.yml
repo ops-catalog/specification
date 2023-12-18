@@ -6,16 +6,18 @@ repo_name: "open-catalog-alliance/specification"
 
 nav:
     - index.md
+    - 'Start Here': 'starthere.md'
     - Examples:
       - 'My Account': 'examples/my-account.md'
       - 'Deployer': 'examples/deploy.md'
     - 'Templates': 'templates.md'
+    - 'Scorecard': 'scorecard.md'
     - 'Api Docs': api.md
-    - Setup: []
+    - 'FAQs': 'faqs.md'
     - Issues:
         - 'Tracker': 'https://github.com/open-catalog-alliance/specification/issues'
-    - TODO.md
-    - 'FAQs': 'faqs.md'
+    - 'Backlog': 'backlog.md'
+    - 'Much later': 'TODO.md'
 docs_dir: "docs"
 site_dir: "site"
 
@@ -33,6 +35,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - attr_list
+  - md_in_html
 
 
 theme:
