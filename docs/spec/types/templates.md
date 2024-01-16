@@ -28,7 +28,7 @@ includes:
 
 Anything declared in internal will be overridden by attributes in account-team. Similarly, when this is included in the definition of a catalog item, the latter includes will override the attributes in this template. Ultimately, local declaration in catalog item will take precedence over any imported by includes.
 
-![Use of Template in My Account](assets/images/my-account-template.svg)
+![Use of Template in My Account](./../../assets/images/my-account-template.svg)
 
 #### When do I use template?
 You can use template to reduce the amount of configuration code you need to manage in many places. By grouping related attributes in a single template, you allow them to be shared within the domain and across the organisation.

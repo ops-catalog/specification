@@ -5,14 +5,38 @@ repo_url: "https://github.com/open-catalog-alliance/specification"
 repo_name: "open-catalog-alliance/specification"
 
 nav:
-    - index.md
-    - 'Start Here': 'starthere.md'
+    - 'Is it for me?': 'index.md'
+    - 'Problem Statement': 'problems.md'
+    - 'Why OCA?': 'whyoca.md'
+    - 'Ecosystem': 'status.md'
+    - 'Use Cases': 'usecases.md'
+    - 'Specification': 
+      - 'Structure': spec/structure.md
+      - 'Types':
+        - 'Component (wip)': 'spec/types/component.md'
+        - 'Storage (wip)': 'spec/types/storage.md'
+        - 'Resource (wip)': 'spec/types/resource.md'
+        - 'Endpoint (wip)': 'spec/types/endpoint.md'
+        - 'Templates': 'spec/types/templates.md'
+      - 'Catalog':
+        - 'Running (wip)': 'catalog/running.md'  
+        - 'Configuration (wip)': 'catalog/configuration.md'
+        - 'Api Docs': 'catalog/api.md'
+      - 'Discovery':
+        - 'Running (wip)': 'discovery/running.md'
+        - 'Configuration (wip)': 'discovery/configuration.md'
+        - 'Component (wip)': 'discovery/component.md'
+        - 'Resource (wip)': 'discovery/resource.md'
+        - 'Storage (wip)': 'discovery/storage.md'
+        - 'Endpoint (wip)': 'discovery/endpoint.md'
+      - 'Fulfillment':
+        - 'Running (wip)': 'fulfillment/running.md'
+        - 'Configuration (wip)': 'fulfillment/configuration.md'
+        - 'Resource (wip)': 'fulfillment/resource.md'
+      - 'Scorecard': 'spec/scorecard.md'
     - Examples:
       - 'My Account': 'examples/my-account.md'
       - 'Deployer': 'examples/deploy.md'
-    - 'Templates': 'templates.md'
-    - 'Scorecard': 'scorecard.md'
-    - 'Api Docs': api.md
     - 'FAQs': 'faqs.md'
     - Issues:
         - 'Tracker': 'https://github.com/open-catalog-alliance/specification/issues'
@@ -53,5 +77,5 @@ theme:
 plugins:
   - render_swagger:
       allow_arbitrary_locations : true
-      javascript: ../assets/js/swagger-ui-bundle.js
-      css: ../assets/css/swagger-ui.css      
+      javascript: ../../assets/js/swagger-ui-bundle.js
+      css: ../../assets/css/swagger-ui.css      
