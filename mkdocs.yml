@@ -8,26 +8,29 @@ nav:
     - 'Is it for me?': 'index.md'
     - 'Problem Statement': 'problems.md'
     - 'Why OCA?': 'whyoca.md'
+    - 'TLDR':
+      - 'Quickstart': 'quickstart.md'
+      - 'Demo': 'demo.md'
     - 'Ecosystem': 'status.md'
     - 'Use Cases': 'usecases.md'
     - 'Specification': 
       - 'Structure': spec/structure.md
       - 'Types':
-        - 'Component (wip)': 'spec/types/component.md'
-        - 'Storage (wip)': 'spec/types/storage.md'
-        - 'Resource (wip)': 'spec/types/resource.md'
-        - 'Endpoint (wip)': 'spec/types/endpoint.md'
+        - 'Component': 'spec/types/component.md'
+        - 'Store': 'spec/types/store.md'
+        - 'Resource': 'spec/types/resource.md'
+        - 'Endpoint': 'spec/types/endpoint.md'
         - 'Templates': 'spec/types/templates.md'
       - 'Catalog':
-        - 'Running (wip)': 'catalog/running.md'  
-        - 'Configuration (wip)': 'catalog/configuration.md'
+        - 'Running': 'catalog/running.md'  
+        - 'Configuration': 'catalog/configuration.md'
         - 'Api Docs': 'catalog/api.md'
       - 'Discovery':
         - 'Running (wip)': 'discovery/running.md'
         - 'Configuration (wip)': 'discovery/configuration.md'
         - 'Component (wip)': 'discovery/component.md'
         - 'Resource (wip)': 'discovery/resource.md'
-        - 'Storage (wip)': 'discovery/storage.md'
+        - 'Appliance (wip)': 'discovery/appliance.md'
         - 'Endpoint (wip)': 'discovery/endpoint.md'
       - 'Fulfillment':
         - 'Running (wip)': 'fulfillment/running.md'
@@ -78,4 +81,6 @@ plugins:
   - render_swagger:
       allow_arbitrary_locations : true
       javascript: ../../assets/js/swagger-ui-bundle.js
-      css: ../../assets/css/swagger-ui.css      
+      css: ../../assets/css/swagger-ui.css     
+
+      

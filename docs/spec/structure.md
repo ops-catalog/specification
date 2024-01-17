@@ -270,11 +270,12 @@ The table below shows various kind, type and additional attributes associated wi
 | Kind              | Type                                              | Attributes                                           |
 |-------------------|---------------------------------------------------|------------------------------------------------------|
 | Component         | App, Job                                          | all                                                  |
-| Appliance         | VM, Hardware, Machine, Image                      | -dependencies                                        |
 | Store             | Disk, SFTP, NFS, Bucket, Database, Messaging      | all                                                  |
-| Technology        | Library, Framework, Language, Technology          | -dependencies                                        |
 | Pipeline          | Pipeline, Workflow                                | all, +graph                                          |
-| Resource          | Schema, Keyspace, Collection, Index, Topic, Queue, Repository | +attachment - to pick the store to use               |
+| Resource          | Schema, Keyspace, Collection, Index, Topic, Queue, Repository | providedBy attribute under dependencies pins resource to a provider              |
+| Endpoint | HTTPRoute, TCPRoute, Ingress, ALB          | all                                        |
+| Appliance         | VM, Hardware, Machine, Image                      | -dependencies                                        |
+| Technology        | Library, Framework, Language, Technology          | -dependencies                                        |
 | SecurityRule      | Firewall, SecurityGroup                           | +rule - from address, to address, port, toport       |
 | SecurityRuleGroup | Firewall, SecurityGroup list                      | +rule[]                                              |
 | Infrastructure    | Infrastructure                                    | +contains - appliance, store, component              |
