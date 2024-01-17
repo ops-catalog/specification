@@ -1,8 +1,8 @@
 ---
 site_name: Ops Catalog
-site_url: https://github.com/open-catalog-alliance
-repo_url: "https://github.com/open-catalog-alliance/specification"
-repo_name: "open-catalog-alliance/specification"
+site_url: https://ops-catalog.github.io/specification
+repo_url: "https://github.com/ops-catalog/specification"
+repo_name: "ops-catalog/specification"
 
 nav:
     - 'Is it for me?': 'index.md'
@@ -44,7 +44,6 @@ nav:
     - Issues:
         - 'Tracker': 'https://github.com/open-catalog-alliance/specification/issues'
     - 'Backlog': 'backlog.md'
-    - 'Much later': 'TODO.md'
 docs_dir: "docs"
 site_dir: "site"
 
