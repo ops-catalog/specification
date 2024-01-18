@@ -11,6 +11,79 @@ options:
   discovery: {}
 ```
 
+### Log
+The log configuration node allows you to provide the minimum log level for the catalog application and the format to write the logs in. 
+
+```yaml
+  log:
+    level: "info"
+    format: "json"
+```
+Valid values for levels are DEBUG, INFO, WARN and ERROR.
+The application supports plain text and json log format. Default format for logging is json.
+
+### Server
+The address value configured through the server.address attribute is provided as listen host to the go server.
+
+Few example values can show you what is possible:
+ :8080, 0.0.0.0:8080 or 127.0.0.1:8080, some-domain.com:8080
+
+```yaml
+  server:
+    address: ":8080"
+```
+
+### Serve
+The source attribute in serve node is an array of various different source types to load ops catalog data from. It can be from a http resource or a git project or a folder. Each source can be individually enabled or disabled. Few source examples are provided below.
+
+Thre refresh frequency configuration can be provided to periodically refresh the catalog data by reloading from sources.
+
+The search.index attribute is an array which can be configured to provide indexing and filter criteria when looking up catalog items.
+
+Because ```team``` is one of the attribute values for index, we can query the ops catalog with the query parameter of ?team=<team_name>. Same applies for the other query parameters here.
+
+
+```yaml
+  serve:
+    search: 
+      index: 
+        - "layer"
+        - "tier" 
+        - "team" 
+        - "domain" 
+        - "contact"
+        - "type"
+        - "language"
+        - "name"
+    refresh:
+      frequency: 1m
+    source:
+    - location: ../specification/examples/my-account
+      extension: ".yaml"
+      name: "gitsync"
+      enabled: true
+
+    - location: "https://github.com/ops-catalog/discovery-sink.git"
+      extension: ".yaml"
+      name: "discovery-sink"
+      enabled: true
+      options:
+        username: "skhatri"
+        password: "file:./tmp/password"
+
+
+    - location: "http://localhost:8000/my-account-catalog2.gz"
+      extension: ".yaml"
+      name: "gz-http-catalog-source"
+      enabled: false
+```
+
+### Discovery
+
+
+### Fulfillment
+
+
 
 A complete config.yaml is provided for your reference.
 ```yaml
@@ -58,7 +131,7 @@ options:
       frequency: 10m
     target:
       name: "sink"
-      location: "https://github.com/open-catalog-alliance/discovery-sink.git"
+      location: "https://github.com/ops-catalog/discovery-sink.git"
       options:
         username: "skhatri"
         password: "file:./tmp/ghkey"
@@ -84,7 +157,7 @@ options:
       name: "gitsync"
       enabled: true
 
-    - location: "https://github.com/open-catalog-alliance/discovery-sink.git"
+    - location: "https://github.com/ops-catalog/discovery-sink.git"
       extension: ".yaml"
       name: "discovery-sink"
       enabled: true
@@ -93,7 +166,7 @@ options:
         password: "file:./tmp/password"
 
 
-    - location: "https://github.com/open-catalog-alliance/specification.git"
+    - location: "https://github.com/ops-catalog/specification.git"
       extension: ".yaml"
       name: "git-source"
       enabled: false
@@ -102,7 +175,7 @@ options:
         password: "file:./tmp/password"
         subpath: examples/my-account
 
-    - location: "git@github.com:open-catalog-alliance/specification.git"
+    - location: "git@github.com:ops-catalog/specification.git"
       extension: ".yaml"
       name: "git-ssh-source"
       enabled: false

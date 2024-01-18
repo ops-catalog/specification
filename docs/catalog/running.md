@@ -8,3 +8,5 @@ You can build image locally via ```make go-image```
 
 Running from source is also possible by executing ```go run cmd/catalog.go``` or ```make run-local```
 
+
+A quickstart guide can be found [here](../../quickstart)

@@ -23,18 +23,16 @@ nav:
         - 'Templates': 'spec/types/templates.md'
       - 'Catalog':
         - 'Running': 'catalog/running.md'  
-        - 'Configuration': 'catalog/configuration.md'
         - 'Api Docs': 'catalog/api.md'
+        - 'Configuration': 'catalog/configuration.md'
       - 'Discovery':
         - 'Running (wip)': 'discovery/running.md'
-        - 'Configuration (wip)': 'discovery/configuration.md'
         - 'Component (wip)': 'discovery/component.md'
         - 'Resource (wip)': 'discovery/resource.md'
         - 'Appliance (wip)': 'discovery/appliance.md'
         - 'Endpoint (wip)': 'discovery/endpoint.md'
       - 'Fulfillment':
         - 'Running (wip)': 'fulfillment/running.md'
-        - 'Configuration (wip)': 'fulfillment/configuration.md'
         - 'Resource (wip)': 'fulfillment/resource.md'
       - 'Scorecard': 'spec/scorecard.md'
     - Examples:
