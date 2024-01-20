@@ -26,11 +26,12 @@ nav:
         - 'Api Docs': 'catalog/api.md'
         - 'Configuration': 'catalog/configuration.md'
       - 'Discovery':
-        - 'Running (wip)': 'discovery/running.md'
+        - 'Specification': 'discovery/specification.md'
         - 'Component (wip)': 'discovery/component.md'
         - 'Resource (wip)': 'discovery/resource.md'
-        - 'Appliance (wip)': 'discovery/appliance.md'
+        - 'Bucket (wip)': 'discovery/bucket.md'
         - 'Endpoint (wip)': 'discovery/endpoint.md'
+        - 'Store (wip)': 'discovery/store.md'
       - 'Fulfillment':
         - 'Running (wip)': 'fulfillment/running.md'
         - 'Resource (wip)': 'fulfillment/resource.md'
