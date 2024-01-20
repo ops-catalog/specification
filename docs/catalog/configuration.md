@@ -114,6 +114,37 @@ For teams, who would like to review what has been discovered, it is recommended 
 
 ### Fulfillment
 
+Fulfillment module requires access to catalog entries. Hence, it needs reference to catalog URL. It can either be referenced in-process via the value of "local" or a location url can be specified when running catalog and fulfillment module separately.
+
+If you are also enabling discovery or adding discovery source in the settings file and would like to reuse the discovery configuration for fulfillment as well, it is possible to do so by enabling the flag ```useDiscovery```
+
+Use the target attribute to provide custom fulfillment targets.
+
+```yaml
+  fulfillment:
+    reference:
+      catalog:
+        #location - local, url
+        location: "local"
+      useDiscovery: true
+      target:
+        - name: broadcast
+          location: "kafka://kafka.ops-catalog.io:9092/catalog-events"
+          options:
+            username: "kafka"
+            password: "none"
+    run:
+      frequency: 2m
+    enabledEngines:
+      - cassandra
+      - postgres
+      - kafka
+#      - broadcast
+```
+
+The fulfillment task can run periodically and can be specified through run.frequency attribute under fulfillment.
+
+Finally, enabledEngines array can be configured to choose one or many targets against which you would like to provison catalog items. 
 
 
 A complete config.yaml is provided for your reference.
