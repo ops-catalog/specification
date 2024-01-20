@@ -41,7 +41,7 @@ nav:
       - 'Deployer': 'examples/deploy.md'
     - 'FAQs': 'faqs.md'
     - Issues:
-        - 'Tracker': 'https://github.com/open-catalog-alliance/specification/issues'
+        - 'Tracker': 'https://github.com/ops-catalog/specification/issues'
     - 'Backlog': 'backlog.md'
 docs_dir: "docs"
 site_dir: "site"
@@ -74,6 +74,14 @@ theme:
   favicon: assets/images/oca.svg
   features:
     - content.code.copy
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - toc.integrate
+  font:
+    text: Open Sans
+    code: Jetbrains Mono
 
 plugins:
   - render_swagger:
@@ -82,3 +90,12 @@ plugins:
       css: ../../assets/css/swagger-ui.css     
 
       
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
