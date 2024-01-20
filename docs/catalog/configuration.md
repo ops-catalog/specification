@@ -79,7 +79,38 @@ Because ```team``` is one of the attribute values for index, we can query the op
 ```
 
 ### Discovery
+We try to use the same source object structure for both serving and discovery files. You can add as many discovery sources as you would like as well.
+Further to that, you can list engines you would like to discover against. Similarly, the refresh frequency attribute helps run the discovery process as frequently as you would like.
 
+Once items are discovered, we would need to persist them somewhere. We can specify a target location to commit the changes to.
+
+```yaml
+  discovery:
+    source:
+      - location: ../examples/datasets/discovery
+        extension: ".yaml"
+        name: "discover-1"
+        enabled: true
+    enabledEngines:
+      - k8s
+      - cassandra
+      - kafka
+      - airflow
+      - postgres
+      - s3
+    refresh:
+      frequency: 10m
+    target:
+      name: "sink"
+      location: "https://github.com/ops-catalog/discovery-sink.git"
+      options:
+        username: "skhatri"
+        password: "file:./tmp/ghkey"
+```
+
+If the discovery target and serving source are the same, the newly discovered objects will be available through catalog API as soon as the next serve refresh activity is run.
+
+For teams, who would like to review what has been discovered, it is recommended to commit to a different branch and load serving data from a different branch. A PR review workflow can be added both to validate and to enrich data further before sharing with others.
 
 ### Fulfillment
 
