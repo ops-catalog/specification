@@ -178,5 +178,14 @@ It is not possible to add comment to Cassandra Keyspace. Hence we look for a tab
 CREATE TABLE catalog (
     ID text primary key,
     CONTENT BLOB
-) WITH comments = '{"discovery.ops-catalog.io/team": "account"}';
+) WITH 
+comment = '{
+  "discovery.ops.catalog/skip": "false",
+  "discovery.ops.catalog/team": "account", 
+  "discovery.ops.catalog/domain": "onboarding",
+  "discovery.ops.catalog/capability": "onboarding",
+  "discovery.ops.catalog/includes": "onboarding,internal"
+}';
 ```
+
+
