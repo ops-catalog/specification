@@ -157,7 +157,7 @@ options:
   server:
     address: ":8080"
 
-  action:
+  fulfillment:
     reference:
       catalog:
         location: "local"

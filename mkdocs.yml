@@ -29,10 +29,9 @@ nav:
         - 'Specification': 'discovery/specification.md'
         - 'Workloads': 'discovery/workloads.md'
         - 'Resources': 'discovery/resource.md'
-        - 'Endpoint (wip)': 'discovery/endpoint.md'
+        - 'Endpoint': 'discovery/endpoint.md'
       - 'Fulfillment':
-        - 'Running (wip)': 'fulfillment/running.md'
-        - 'Resource (wip)': 'fulfillment/resource.md'
+        - 'Specification': 'fulfillment/specification.md'
       - 'Scorecard': 'spec/scorecard.md'
     - Examples:
       - 'My Account': 'examples/my-account.md'
