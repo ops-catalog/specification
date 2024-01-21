@@ -27,11 +27,9 @@ nav:
         - 'Configuration': 'catalog/configuration.md'
       - 'Discovery':
         - 'Specification': 'discovery/specification.md'
-        - 'Component (wip)': 'discovery/component.md'
-        - 'Resource (wip)': 'discovery/resource.md'
-        - 'Bucket (wip)': 'discovery/bucket.md'
+        - 'Workloads': 'discovery/workloads.md'
+        - 'Resources': 'discovery/resource.md'
         - 'Endpoint (wip)': 'discovery/endpoint.md'
-        - 'Store (wip)': 'discovery/store.md'
       - 'Fulfillment':
         - 'Running (wip)': 'fulfillment/running.md'
         - 'Resource (wip)': 'fulfillment/resource.md'
