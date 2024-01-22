@@ -140,8 +140,13 @@ Example comment:
 
 ```sql
 COMMENT ON
-    SCHEMA notifications
-    IS '{"discovery.ops-catalog.io/team": "notifiers"}';
+    SCHEMA refdata IS '{
+    "discovery.ops.catalog/skip": "false",
+    "discovery.ops.catalog/team": "notifiers", 
+    "discovery.ops.catalog/domain": "jobs",
+    "discovery.ops.catalog/capability": "datamart",
+    "discovery.ops.catalog/includes": "data-stuff,internal"
+  }';
 ```
 
 ### Cassandra Keyspaces
@@ -184,7 +189,7 @@ comment = '{
   "discovery.ops.catalog/team": "account", 
   "discovery.ops.catalog/domain": "onboarding",
   "discovery.ops.catalog/capability": "onboarding",
-  "discovery.ops.catalog/includes": "onboarding,internal"
+  "discovery.ops.catalog/includes": "onboarding-stuff,internal"
 }';
 ```
 
