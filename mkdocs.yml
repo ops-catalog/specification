@@ -36,6 +36,8 @@ nav:
     - Examples:
       - 'My Account': 'examples/my-account.md'
       - 'Deployer': 'examples/deploy.md'
+    - Integrations:
+      - 'Backstage': 'ui/backstage.md'
     - 'FAQs': 'faqs.md'
     - Issues:
         - 'Tracker': 'https://github.com/ops-catalog/specification/issues'
