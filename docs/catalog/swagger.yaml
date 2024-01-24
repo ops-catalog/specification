@@ -341,8 +341,6 @@ components:
     Classification:
       type: object
       properties:
-        type:
-          type: string
         tag:
           type: array
           items:

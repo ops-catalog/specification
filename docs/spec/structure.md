@@ -259,7 +259,6 @@ The classification node consists of the following attributes:
 
 | Name       | Description                                                                              |
 |------------|------------------------------------------------------------------------------------------|
-| type       | Type of the catalog item - usually a hardware, software or tech                          |
 | tag        | An array of labels to apply to this catalog item for filtering, search, grouping purpose |
 | domain     | Domain of which this catalog item is a member of                                         | 
 | capability | A specific product capability this catalog item is a part of                             |
