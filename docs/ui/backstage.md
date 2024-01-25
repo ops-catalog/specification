@@ -182,6 +182,14 @@ export class OpsProvider implements EntityProvider {
   }
 }
 ```
-
+#### UI
 This will show new Kinds in backstage and the relationship defined in ops-catalog will be visible there too.
-![Backstage Kind](backstage-types.png)
+
+##### Component View
+![Backstage Components](../assets/images/component-view.png)
+
+##### Resource View
+![Backstage Resources](../assets/images/resource-view.png)
+
+##### Endpoint View
+![Backstage Endpoints](../assets/images/endpoint-view.png)
