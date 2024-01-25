@@ -15,7 +15,6 @@ dependencies:
   providedBy: postgres.pg-2 
   triggers: []
 classification:
-    type: "Schema"
     tag: ["origination", "onboarding", "customer"]
     domain: "origination"
     team: "loaders"
