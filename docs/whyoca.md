@@ -2,7 +2,8 @@
 
 Ops catalog is a modern collaborative catalog solution designed to collect
 and make software engineering system metadata available for consumer apps
-to facilitate various automation tasks in the area of DevOps.
+to facilitate various automation tasks empowering the DevOps folks to provide 
+Internal SaaS platforms.
 
 ### Why OCA
 

@@ -8,6 +8,7 @@ nav:
     - 'Is it for me?': 'index.md'
     - 'Problem Statement': 'problems.md'
     - 'Why OCA?': 'whyoca.md'
+    - 'How does it compare?': 'howcompare.md'
     - 'TLDR':
       - 'Quickstart': 'quickstart.md'
       - 'Demo': 'demo.md'
