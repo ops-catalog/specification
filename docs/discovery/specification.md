@@ -40,6 +40,7 @@ instance:
       domain: "storage"
       type: "Topic"
       capability: "operations"
+    duplicatesStrategy: "ignore"
 ```
 
 
@@ -61,4 +62,21 @@ The below table summarises the ways to override for each resource type
 |Airflow|Tags Array in Dags|
 |ALB|Object Tags|
 
+Duplicates can be handled by providing a strategy value at instance level.
 
+```yaml
+  instance:
+    ...
+    duplicatesStrategy: ""
+```
+
+Following are the possible values for ```duplicatesStrategy```
+
+|Strategy|Description|
+|---|---|
+|skip| Drop the discovered item |
+|ignore| Ignore and add discovered item to the catalog|
+|mergeLeft|Use existing catalog object as the base and override with attributes found in discovery|
+|merge|Shorthand for mergeLeft|
+|mergeRight|Use discovered object as the base and override with attributes found in catalog|
+|replace|Replace discovered item with original item from the catalog|
