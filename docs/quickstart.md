@@ -22,25 +22,11 @@ Load the following link to view catalog item:
 http://localhost:8080/api/catalog
 
 
-### Discovery Mode
-This compose file also runs a standalone kafka, postgres and cassandra and seeds them with initial objects so they can be collected by the discovery module.
-
-```
-docker compose --env-file docker/.discovery -f docker/docker-compose.yaml --profile all up -d
-```
-
-### Fulfillment Mode
-The compose file is somewhat similar to discovery as it is now writing back to the targets.
-
-```
-docker compose --env-file docker/.fulfillment -f docker/docker-compose.yaml --profile all up -d
-```
-
+### Minimal Data
 If you have resource constraint, you can run selected profile as well and accordingly update engines list in docker/ops-catalog/conf/discovery.yaml or fulfillment.yaml
 
 ```
-docker compose --env-file docker/.minimal -f docker/docker-compose.yaml --profile k8s up -d
-docker compose --env-file docker/.minimal -f docker/docker-compose.yaml --profile catalog up -d
+docker compose --env-file docker/.minimal -f docker/docker-compose.yaml --profile minimal up -d
 ```
 
 The above two commands will run catalog, kubernetes api and postgres.
@@ -78,9 +64,26 @@ EOF
 Once the discovery and fulfillment loop is complete, there should be two new items in the catalog.
 The schema called merchant should be visible in postgres as well.
 
-Check the catalog entry via api calls:
+Check the catalog entry via api calls. The default refresh frequency is served data is set at 5 minutes which you can change by updating ops-catalog/conf/*.yaml
 
 ```shell 
 http://localhost:8080/api/catalog?name=merchants
 http://localhost:8080/api/catalog?name=refdata
 ```
+If you list files under datasets/discovered-items you should also see few new folders depending on what discovery engines were enabled. In the case of minimal profile, you will see k8s and postgres folders populated with catalog items. 
+
+
+### Discovery Mode
+This compose file also runs a standalone kafka, postgres and cassandra and seeds them with initial objects so they can be collected by the discovery module.
+
+```
+docker compose --env-file docker/.discovery -f docker/docker-compose.yaml --profile all up -d
+```
+
+### Fulfillment Mode
+The compose file is somewhat similar to discovery as it is now writing back to the targets.
+
+```
+docker compose --env-file docker/.fulfillment -f docker/docker-compose.yaml --profile all up -d
+```
+
