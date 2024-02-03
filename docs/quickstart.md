@@ -68,7 +68,7 @@ Check the catalog entry via api calls. The default refresh frequency is served d
 
 ```shell 
 http://localhost:8080/api/catalog?name=merchants
-http://localhost:8080/api/catalog?name=refdata
+http://localhost:8080/api/catalog?name=servicing.refdata
 ```
 If you list files under datasets/discovered-items you should also see few new folders depending on what discovery engines were enabled. In the case of minimal profile, you will see k8s and postgres folders populated with catalog items. 
 
@@ -87,3 +87,9 @@ The compose file is somewhat similar to discovery as it is now writing back to t
 docker compose --env-file docker/.fulfillment -f docker/docker-compose.yaml --profile all up -d
 ```
 
+### Cleanup Activity
+To cleanup what we did just then, run the following command to remove all running containers associated with this project.
+
+```
+docker compose -f docker/docker-compose.yaml down --remove-orphans
+```
