@@ -19,6 +19,7 @@ There are other attributes which are contextual and they are listed here:
 |org|Organisation owning the repositories in scope|Github|
 |project|Project owning the repositories in scope|Bitbucket|
 |use-hints|Flag used to determine whether object enrichment should be done by reading comments, tags, properties etc|Databases,Git Service,Object Store|
+|provider|Name of the provider if multiple provider exist for a type - eg Github, Bitbucket| |
 
 There are times when you would like to include or exclude certain objects from being discovered. It is possible to specify a regular expression for both under ```filter``` attribute.
 
