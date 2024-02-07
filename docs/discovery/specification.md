@@ -11,6 +11,15 @@ The majority of the information about all engines can be held in a grand total o
 |password|password for auth|
 |ssl| flag to specify whether TLS is required|
 
+There are other attributes which are contextual and they are listed here:
+
+|Attribute|Description|Applicable to|
+|---|---|---|
+|database|Database Name|Postgres|
+|org|Organisation owning the repositories in scope|Github|
+|project|Project owning the repositories in scope|Bitbucket|
+|use-hints|Flag used to determine whether object enrichment should be done by reading comments, tags, properties etc|Databases,Git Service,Object Store|
+
 There are times when you would like to include or exclude certain objects from being discovered. It is possible to specify a regular expression for both under ```filter``` attribute.
 
 If you want to provide owner information for discovered items, you can provide the classification attributes like in the example below.
@@ -35,6 +44,7 @@ instance:
       username: "kafka"
       password: "file:./tmp/kafkapassword"
       ssl: "false"
+      use-hints: "true"
     classification:
       team: "keepers"
       domain: "storage"
@@ -60,7 +70,13 @@ The below table summarises the ways to override for each resource type
 |Kubernetes Workloads|Annotations|
 |Endpoints in Gateway API & Kubernetes|Annotations|
 |Airflow|Tags Array in Dags|
+|Git|Message specified in tag named catalog|
 |ALB|Object Tags|
+
+In Scenarios where it is not possible to read further enrichment hints from the above locations, especially true for databases and Git, if running with restricted permissions,
+one can disable lookup by specifying ```use-hints: "false"```. When not provided, it use-hints defaults to true.
+
+
 
 Duplicates can be handled by providing a strategy value at instance level.
 
@@ -80,3 +96,5 @@ Following are the possible values for ```duplicatesStrategy```
 |merge|Shorthand for mergeLeft|
 |mergeRight|Use discovered object as the base and override with attributes found in catalog|
 |replace|Replace discovered item with original item from the catalog|
+
+

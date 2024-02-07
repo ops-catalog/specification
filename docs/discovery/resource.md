@@ -193,4 +193,72 @@ comment = '{
 }';
 ```
 
+### Git Repositories
+Given that a Repository source is an attribute contained by a Catalog Item representing an app, it is possible that you want to only include select git projects as catalog item (ones which are used by GitOps). 
+
+```yaml
+apiVersion: "v1"
+kind: Discovery
+metadata: 
+  name: "github"
+
+type: git
+
+instance:
+  - name: "personal-github"
+    includes:
+      - internal
+    filter: 
+      includes: [".*by-example", ".*playground"]
+    options: 
+      host: "api.github.com"
+      port: "443"
+      username: "file:./tmp/githubusername"
+      password: "file:./tmp/githubpassword"
+      ssl: "true"
+    classification:
+      team: "devexp"
+      domain: "platform"
+      capability: "operations"
+    duplicatesStrategy: "ignore" 
+
+  - name: "org-github"
+    includes:
+      - internal
+    filter:
+      excludes: [".*"]
+      includes: [".*examples", ".*specification"]
+    options: 
+      host: "api.github.com"
+      port: "443"
+      username: "file:./tmp/githubusername"
+      password: "file:./tmp/githubpassword"
+      ssl: "true"
+      org: "ops-catalog"
+      use-hints: "false"
+    classification:
+      team: "devexp"
+      domain: "platform"
+      capability: "operations"
+    duplicatesStrategy: "ignore" 
+
+```
+
+For the second github instance, we are choosing not to look for enrichment data in a special tag as we provide the attribute ```use-hints: "false"```
+
+It is also possible to store all Git Repositories in Ops Catalog. A recommended setup is to run separate instance of OpsCatalog for the purpose of Discovering and Provisioning all Git repositories for your organisation.
+
+
+Further enrichment hints can be provided to Git Discovery module by creating a "tag" by the name "catalog".
+
+```shell
+ git tag -m'{
+  "discovery.ops.catalog/skip": "false",
+  "discovery.ops.catalog/team": "data",
+  "discovery.ops.catalog/domain": "jobs",
+  "discovery.ops.catalog/capability": "analytics",
+  "discovery.ops.catalog/includes": "data-stuff,internal"
+}' catalog
+git push --tags
+```
 
