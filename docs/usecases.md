@@ -22,4 +22,4 @@ Few Possible Use Cases for DevOps and Self-Service Platforms:
 
  \* - in roadmap or being implemented. Reach out if interested to help with requirement and/or code.
 
-![Ops Catalog Use Cases](./assets/images/opscatalog.svg)
+![Ops Catalog Use Cases](./assets/images/opsusecases.svg)
