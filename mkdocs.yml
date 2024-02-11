@@ -41,7 +41,6 @@ nav:
     - 'FAQs': 'faqs.md'
     - Issues:
         - 'Tracker': 'https://github.com/ops-catalog/specification/issues'
-    - 'Backlog': 'backlog.md'
 docs_dir: "docs"
 site_dir: "site"
 
