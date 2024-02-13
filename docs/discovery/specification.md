@@ -37,6 +37,7 @@ instance:
     filter:
       excludes: [".*"]
       includes: ["account.*", "deployments.*", "aws-sts.*"]
+    enabled: true
     includes:
       - internal
     options:
@@ -98,4 +99,4 @@ Following are the possible values for ```duplicatesStrategy```
 |mergeRight|Use discovered object as the base and override with attributes found in catalog|
 |replace|Replace discovered item with original item from the catalog|
 
-
+Discovery Instances are enabled by default. At times, we may want to disable a declared discovery instance and for this we have the ```enabled``` flag.
