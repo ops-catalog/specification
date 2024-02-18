@@ -10,6 +10,9 @@ The majority of the information about all engines can be held in a grand total o
 |username|username for auth|
 |password|password for auth|
 |ssl| flag to specify whether TLS is required|
+|cafile|Location of CA file, if not globally trusted and ssl is enabled|
+|keyfile|Location of key file, required for client auth when ssl is enabled|
+|certfile|Location of cert file, required for client auth when ssl is enabled|
 
 There are other attributes which are contextual and they are listed here:
 
