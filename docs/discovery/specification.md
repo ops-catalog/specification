@@ -112,6 +112,9 @@ Few examples of valid expressions are listed below.
 |enabled: "${on=on}"|It also handles text to text comparison. Useful when lhs or rhs the outcome of template substitution|
 |enabled: true| A boolean static value to enable discovery config|
 
+See <a href="https://github.com/ops-catalog/examples/blob/main/datasets/docker-discovery/pg1.yaml" target="_blank">Example Postgres Discovery Config</a> to check how expressions are used to enable different discovery targets.
+
+
 Discovery Handler only supports equal and not equal checks currently.
 
 
