@@ -102,4 +102,16 @@ Following are the possible values for ```duplicatesStrategy```
 |mergeRight|Use discovered object as the base and override with attributes found in catalog|
 |replace|Replace discovered item with original item from the catalog|
 
-Discovery Instances are enabled by default. At times, we may want to disable a declared discovery instance and for this we have the ```enabled``` flag.
+Discovery Instances are enabled by default. At times, we may want to disable a declared discovery instance and for this we have the ```enabled``` flag. Enabled flag can be evaluated at runtime as well with simple expressions.
+Few examples of valid expressions are listed below.
+
+|Expression|Meaning|
+|---|---|
+|enabled: "${env.SSL_STATE==on}"|Enable the discovery config when environment variable SSL_STATE is set to "on"|
+|enabled: "${env.GOOS!=darwin}"|Only enable this discovery when not running on MacOS|
+|enabled: "${on=on}"|It also handles text to text comparison. Useful when lhs or rhs the outcome of template substitution|
+|enabled: true| A boolean static value to enable discovery config|
+
+Discovery Handler only supports equal and not equal checks currently.
+
+
