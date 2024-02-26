@@ -2,11 +2,11 @@
 
 Few Possible Use Cases for DevOps and Self-Service Platforms:
 
-|Area|Use Case|Purpose|Sponsor|
+|Area|Use Case|Purpose|Owner|
 |---|---|---|---|
 |Audit|Audit Report|Generate Inventory List and Licenses|CISO|
 |Prod Support|Issue Assignment|Assign production issues to the correct owners|SRE|
-|Ownership|Find Owners|Find Owners for assets and teams|SRE, DevOps|
+|Ownership|Find Owners|Find Owners for assets and teams|SRE/DevOps|
 |Operations|Manage Certificates|Manage Certificate lifecycle, provisioning and renewal alerts|Head of Operations|
 |Deployment|Config Mgmt|Use Attributes shared by owners as config for deployment|DevOps|
 |Release|Approval Checks|Seek approval from actual owners of the item being deployed|DevOps|
