@@ -1,8 +1,9 @@
 ### Problems
-A handful of problems are shared here as to how efficiency has been impacted in the operations space.
+A handful of problems related to asset catalog are shared here to highlight how operations efficiency has been impacted in general.
+
 
 #### Owner Identification is hard
-In a microservices architecture, there is a proliferation of assets across teams. Identifying Asset Owners is a challenging task. Often times we have a problem with an application, a system or an appliance and it takes a long time to get to the owner and to discuss the issue and seek help.
+In a modern api/data architecture, there is a proliferation of assets across teams. Identifying Asset Owners is a challenging task. Often times we have a problem with an application, a system or an appliance and it takes a long time to get to the owner and to discuss the issue and seek help.
 
 #### Obscure and Inaccessible
 Ease of use is a priority and complexity is not a necessity. Most CMDB were written before microservices and cloud native applications became popular. Not only are new attributes missing, existing ones are hard to get access, retrieve and integrate with.
