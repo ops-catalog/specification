@@ -1,10 +1,10 @@
 # Create Repository	
 
-**Usecase:** Do not wait weeks for some admin to create repositories for you
+**Usecase:** Discover and Create Repositories adopting Self-Service approach. 
 
 **Owner:** Dev Experience
 
-**Business Value:**
+**Business Value:** Secure repositories management without bottlenecks.
 
 ![Issue Assignment](../assets/images/usecases/8.codefactory.svg)
 

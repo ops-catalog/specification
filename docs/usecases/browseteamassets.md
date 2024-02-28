@@ -4,7 +4,7 @@
 
 **Owner:** DevOps 
 
-**Business Value:**
+**Business Value:** Have a view of the assets that matter to the team in the format or setup best suited for them.
 
 ![Browse Team Assets](../assets/images/usecases/6.browseteamassets.svg)
 

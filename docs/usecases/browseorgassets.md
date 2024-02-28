@@ -4,7 +4,7 @@
 
 **Owner:** Infra Teams
 
-**Business Value:**
+**Business Value:** Maintain locally, Access Everywhere. Accurate Open data that is accessible.
 
 ![Browse All Assets](../assets/images/usecases/7.browseorgassets.svg)
 

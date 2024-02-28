@@ -10,7 +10,8 @@ Few Possible Use Cases for DevOps and Self-Service Platforms:
 |Deployment|[Config Mgmt](./usecases/configmgmt.md)|Use Attributes shared by owners as config for deployment|DevOps|
 |Release|[Approval Checks](./usecases/approvals.md)|Seek approval from actual owners of the item being deployed|DevOps|
 |Operations|[Annotate Workloads](./usecases/annotations.md)|Annotate workloads to have rich information at runtime - log dashboards, deployment objects|DevOps|
-|Operations|Create Resources|Create Resources like Database Schemas, Search Indices, Kafka Topics, Security Groups, Buckets|Platform Owners|
+|Operations|[Create Data Resources](./usecases/dataplatform.md)|Create Resources like Database Schemas, Search Indices, Kafka Topics, Buckets|Data Platform Owners|
+|Operations|[Disover Platform Resources](./usecases/platform.md)|Discover Container and Platform Resources like Deployments, Endpoints, IAM, Security Groups|Platform Owners| 
 |Operations|[Browse Team Assets](./usecases/browseteamassets.md)|Browse All types of Assets and Identify Owners, Discover Links including local runs and environments at team or division level|DevOps|
 |Operations|[Browse Org Assets](./usecases/browseorgassets.md)|Browse All types of Assets and Identify Owners, Discover Links including local runs and environments at organisation level|Infra Teams|
 |Code Factory|[Create Repository](./usecases/codefactory.md)|Do not wait weeks for some admin to create repositories for you|Dev Experience|
