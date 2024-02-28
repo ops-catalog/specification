@@ -5,7 +5,7 @@
 
 **Owner:** DevOps
 
-**Business Value:**
+**Business Value:** Efficiently manage and view application properties and flags in catalog item definition.
 
 ![Config Management for Deployment](../assets/images/usecases/1.deployment.svg)
 

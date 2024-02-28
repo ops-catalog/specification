@@ -4,7 +4,7 @@
 
 **Owner:** Platform Owners
 
-**Business Value:**
+**Business Value:** Easily accessible Platform scope in a single place and ready to be actioned.
 
 ![Issue Assignment](../assets/images/usecases/10.platform.svg)
 

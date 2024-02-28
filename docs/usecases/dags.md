@@ -4,7 +4,7 @@
 
 **Owner:** Data Team
 
-**Business Value:**
+**Business Value:** Read-only visibility of pipelines for all
 
 ![Issue Assignment](../assets/images/usecases/5.dags.svg)
 

@@ -4,7 +4,7 @@
 
 **Owner:** Data Platform Owners
 
-**Business Value:**
+**Business Value:** Discover and Provision Data Platform resources minimising manual effort and enhancing efficiency.
 
 ![Issue Assignment](../assets/images/usecases/9.dataplatform.svg)
 
