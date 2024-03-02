@@ -14,7 +14,7 @@ Few Possible Use Cases for DevOps and Self-Service Platforms:
 |Operations|[Disover Platform Resources](./usecases/platform.md)|Discover Container and Platform Resources like Deployments, Endpoints, IAM, Security Groups|Platform Owners| 
 |Operations|[Browse Team Assets](./usecases/browseteamassets.md)|Browse All types of Assets and Identify Owners, Discover Links including local runs and environments at team or division level|DevOps|
 |Operations|[Browse Org Assets](./usecases/browseorgassets.md)|Browse All types of Assets and Identify Owners, Discover Links including local runs and environments at organisation level|Infra Teams|
-|Code Factory|[Create Repository](./usecases/codefactory.md)|Do not wait weeks for some admin to create repositories for you|Dev Experience|
+|Code Factory|[Repository Provisioning](./usecases/codefactory.md)|Do not wait weeks for some admin to create repositories for you|Dev Experience|
 |Build|Register New Builds<font style="font-weight:bold" color="orange">*</font>|Register New Builds when catalog has a new entry|Dev Experience|
 |Data Engineering|[Job DAGs](./usecases/dags.md)|View info on Job Dags|Data Team|
 |Release|Impact Assessment<font style="font-weight:bold" color="orange">*</font>|Calculate true impact and assign tasks to each team for PVT|Release Manager|
