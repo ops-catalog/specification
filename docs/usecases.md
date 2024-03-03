@@ -2,6 +2,51 @@
 
 Few Possible Use Cases for DevOps and Self-Service Platforms:
 
+### Featured
+<div class="container">
+ <div  class="carousel">
+    <div class="card one">
+        <img src="../assets/images/usecases/3.certificates.svg" width="80px" />
+        <div class="card-btn-container">
+            <a href="./certificates">
+            <span>Certificate Management</span>
+            </a>
+        </div>
+    </div>
+ 
+     <div class="card two">
+       <img src="../assets/images/usecases/7.browseorgassets.svg" width="80px" />
+       <div class="card-btn-container">
+            <a href="./browseorgassets">
+            <span>Browse Org Assets</span>
+            </a>
+        </div>
+    </div>
+ 
+      <div class="card three">
+       <img src="../assets/images/usecases/9.dataplatform.svg" width="80px" />
+       <div class="card-btn-container">
+            <a href="./dataplatform">
+            <span>Manage Data Platform Resources</span>
+            </a>
+        </div>
+    </div>
+ 
+      <div class="card four">
+       <img src="../assets/images/usecases/8.codefactory.svg" width="80px" />
+       <div class="card-btn-container">
+            <a href="./codefactory">
+            <span>Provision Repositories</span>
+            </a>
+        </div>
+    </div>
+ 
+ </div>
+ 
+</div>
+
+### Other Use Cases
+
 |Area|Use Case|Purpose|Owner|
 |---|---|---|---|
 |Audit|Audit Report|Generate Inventory List and Licenses|CISO|

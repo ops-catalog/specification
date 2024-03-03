@@ -6,3 +6,57 @@
     background-color: #888888;
     color: #333333;
 }
+
+.container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 100px auto 0 auto;
+  padding: 5px;
+  perspective: 1000px;
+}
+ 
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(-360deg) translateZ(-400px); 
+  animation: anim 100s steps(30000, end) infinite; 
+}
+ 
+.card {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+  height: 187px;
+}
+ 
+.card img {
+  width: 280px;
+  height: 175px;
+}
+ 
+.card.one {
+  transform: rotateY(0deg) translateZ(400px);
+}
+.card.two {
+  transform: rotateY(40deg) translateZ(400px);
+}
+.card.three {
+  transform: rotateY(80deg) translateZ(400px);
+}
+.card.four {
+  transform: rotateY(120deg) translateZ(400px);
+}
+
+@keyframes anim {   
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
