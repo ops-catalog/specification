@@ -1,18 +1,6 @@
-### Assessment
-You can try to answer the following questions and see where you sit on this.
+# What is Ops Catalog
+- The specification based collaborative catalog solution that empowers DevOps teams to automate workflows, enhance visibility, and drive efficiency. 
+- Build your modern internal SaaS platform with an API-first, open-standard catalog designed for maximum flexibility and automation.
+- Discover, manage, and provision software assets with ease.  Empower your DevOps teams with federated data management, powerful APIs, and built-in gamification.
 
-
-<div class="grid cards" markdown>
-
--   How do you find all the database schemas, message queues and assets a team has?
-
--   Are resources like repository, schema, topics provisioned through ticketing by special admins?
-
--   Do you calculate impact prior to software release and exercise different levels of testing with various integration points?
-
--   Do you know what configuration a given microservice is running, who the owner is and how quickly the owner is contacted when problems occur?
-
-</div>
-
-If you did not confidently answer the above questions' answers to yourself, there may be a good chance Ops Catalog could help with your DevOps workflows.
-
+![Ops Catalog](./assets/images/ops-catalog-summary.svg)

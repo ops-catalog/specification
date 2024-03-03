@@ -5,7 +5,7 @@ repo_url: "https://github.com/ops-catalog/specification"
 repo_name: "ops-catalog/specification"
 
 nav:
-    - 'Assessment': 'index.md'
+    - 'What is Ops Catalog': 'index.md'
     - 'Problem Statement': 'problems.md'
     - 'Why OCA?': 'whyoca.md'
     - 'Quickstart': 'quickstart.md'
@@ -76,7 +76,7 @@ theme:
     - navigation.path
     - toc.integrate
   font:
-    text: Open Sans
+    text: Arial
     code: Jetbrains Mono
 
 plugins:

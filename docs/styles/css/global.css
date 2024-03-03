@@ -42,13 +42,13 @@
   transform: rotateY(0deg) translateZ(400px);
 }
 .card.two {
-  transform: rotateY(40deg) translateZ(400px);
+  transform: rotateY(60deg) translateZ(400px);
 }
 .card.three {
-  transform: rotateY(80deg) translateZ(400px);
+  transform: rotateY(120deg) translateZ(400px);
 }
 .card.four {
-  transform: rotateY(120deg) translateZ(400px);
+  transform: rotateY(180deg) translateZ(400px);
 }
 
 @keyframes anim {   
