@@ -1,28 +1,14 @@
-### Ops Catalog
+# Why Ops Catalog
+🛠 <span class="highlight">Specification-based Collaboration:</span> Ops Catalog is not just a catalog; it's a dynamic collaborative solution! Empower your DevOps teams with the freedom to automate workflows, boost visibility, and supercharge efficiency.
 
-Ops catalog is a modern collaborative catalog solution designed to collect
-and make software engineering system metadata available for consumer apps
-to facilitate various automation tasks empowering the DevOps folks to provide 
-Internal SaaS platforms.
+🌐 <span class="highlight">API-First, Open-Standard Catalog:</span> Building a modern internal SaaS platform? Ops Catalog is your go-to companion! With an API-first approach, it provides  flexibility and automation.
 
-### Why OCA
+🚀 <span class="highlight">Discover, Manage, and Provision with Ease:</span> Ops Catalog simplifies the complex. Effortlessly discover, manage, and provision software assets, putting you in control. No more headaches – just streamlined operations.
 
-The key principles of Ops Catalog are the following:
+🤝 <span class="highlight">Federated Data Management and Powerful APIs:</span> We believe in the power of collaboration. Ops Catalog fosters federated data management and equips you with robust APIs, ensuring seamless connectivity and accessibility. Owners own and manage their data.
 
-- Federated Data Mgmt - everyone authors what they own
-- Api First - access asset information via API or subscribe to events
-- Open Standard - open standard and attributes for modern workflows
+✨ <span class="highlight">Ops Catalog:</span> Tailored for Your Team: Ops Catalog seamlessly integrates into your organizational setup, offering unparalleled flexibility. Run multiple Ops Catalogs without sacrificing visibility – each team can have its own, and a single catalog can effortlessly aggregate data from others. It's the agility your operations crave and the simplicity your teams deserve. Elevate your organizational dynamics with Ops Catalog – where adaptability meets simplicity! 🚀💻✨
 
-Other benefits include:
-
-- Quick bootstrap - Discovery modules available to take stock of your assets
-- Fulfillment - Fulfillment plugins help with provisioning assets
-- Friendly Competition - scorecard and leaderboard shows where you are
+🎮 <span class="highlight">Built-in Gamification:</span> We're making work fun! Ops Catalog introduces gamification to keep your teams engaged and motivated. Watch productivity soar as tasks become challenges and milestones turn into victories.
 
 
-### How does Ops Catalog solve it?
-
-Ops Catalog supports collaborative data gathering for software teams. You can start with a contract first or obtain the current state of the world using discovery modules. The API supports read and write operations for modules while allowing powerful search to get graph of related entries.
-
-It provides approach for declaring once and utilising the contract across a suite of DevOps tools.
-Teams can discover novel workflows that haven't been employed previously, addressing audit, development productivity and quality gates. All the while, it adds an element of fun and collaboration for teams through the built-in scorecard and leaderboard mechanism.

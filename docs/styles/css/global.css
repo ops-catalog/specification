@@ -60,3 +60,18 @@
   }
 }
 
+.aside {
+  color: #5a6130;
+}
+
+.highlight {
+  color: #49a872;
+}
+.basic {
+  font-size: 0.85em;
+  color: #222222;
+}
+
+.danger{
+  color: #b96823;
+}
