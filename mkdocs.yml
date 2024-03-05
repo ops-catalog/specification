@@ -8,9 +8,9 @@ nav:
     - 'What is Ops Catalog': 'index.md'
     - 'Problem Statement': 'problems.md'
     - 'Why OCA?': 'whyoca.md'
+    - 'Use Cases': 'usecases.md'
     - 'Quickstart': 'quickstart.md'
     - 'Ecosystem': 'status.md'
-    - 'Use Cases': 'usecases.md'
     - 'Specification': 
       - 'Structure': spec/structure.md
       - 'Types':
