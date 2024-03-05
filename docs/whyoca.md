@@ -7,7 +7,7 @@
 
 🤝 <span class="highlight">Federated Data Management and Powerful APIs:</span> We believe in the power of collaboration. Ops Catalog fosters federated data management and equips you with robust APIs, ensuring seamless connectivity and accessibility. Owners own and manage their data.
 
-✨ <span class="highlight">Ops Catalog:</span> Tailored for Your Team: Ops Catalog seamlessly integrates into your organizational setup, offering unparalleled flexibility. Run multiple Ops Catalogs without sacrificing visibility – each team can have its own, and a single catalog can effortlessly aggregate data from others. It's the agility your operations crave and the simplicity your teams deserve. Elevate your organizational dynamics with Ops Catalog – where adaptability meets simplicity! 🚀💻✨
+✨ <span class="highlight">Tailored for Your Team:</span> Ops Catalog seamlessly integrates into your organizational setup, offering unparalleled flexibility. Run multiple Ops Catalogs without sacrificing visibility – each team can have its own, and a single catalog can effortlessly aggregate data from others. It's the agility your operations crave and the simplicity your teams deserve. Elevate your organizational dynamics with Ops Catalog – where adaptability meets simplicity! 🚀💻✨
 
 🎮 <span class="highlight">Built-in Gamification:</span> We're making work fun! Ops Catalog introduces gamification to keep your teams engaged and motivated. Watch productivity soar as tasks become challenges and milestones turn into victories.
 
