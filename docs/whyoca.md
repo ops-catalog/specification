@@ -1,5 +1,7 @@
 # Why Ops Catalog
 
+<span class="highlight">Just as you wouldn't navigate a book without an index, you can't steer a sizable business without an Ops Catalog.</span>
+
 ### The Challenge: Scattered Knowledge and Manual Drudgery
 
 In many organizations, information about infrastructure, APIs, services, and ownership resides in disparate silos—spreadsheets, wikis, even tribal knowledge.  Developers waste countless hours searching for what they need, contacting other teams for basic information, and manually provisioning resources. These friction points create frustration, delays, and potential misconfigurations.
