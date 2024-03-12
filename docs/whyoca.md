@@ -1,6 +1,6 @@
 # Why Ops Catalog
 
-<span class="highlight">Just as you wouldn't navigate a book without an index, you can't steer a sizable business without an Ops Catalog.</span>
+<span class="highlight">Just as you wouldn't navigate a book without an index, you can't steer a sizable business effectively without an Ops Catalog.</span>
 
 ### The Challenge: Scattered Knowledge and Manual Drudgery
 
