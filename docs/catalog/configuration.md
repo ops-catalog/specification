@@ -97,7 +97,7 @@ Once items are discovered, we would need to persist them somewhere. We can speci
       - kafka
       - airflow
       - postgres
-      - s3
+      - aws
     refresh:
       frequency: 10m
     target:
@@ -188,7 +188,7 @@ options:
       - kafka
       - airflow
       - postgres
-      - s3
+      - aws
     refresh:
       frequency: 10m
     target:

@@ -11,7 +11,7 @@ kind: Discovery
 metadata:
   name: "s3-discovery"
 
-type: s3
+type: aws 
 instance:
   - name: "s3-1"
     filter:
