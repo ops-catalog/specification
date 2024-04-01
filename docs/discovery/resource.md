@@ -1,7 +1,7 @@
 Resources can be discovered from a whole lot of targets like Object Store, Databases, Kafka etc.
 We share the configuration for each type of discovery below:
 
-### S3 Buckets
+### AWS Resources
 
 Here is a configuration to retrieve buckets from S3.
 
@@ -38,12 +38,11 @@ instance:
 ```
 
 This is just like any discovery config, the only difference is the region information.
-
 Discovery annotations can be retrieved from storage resources like S3 buckets.
 
 ![S3 Tags](../assets/images/s3-tags.png)
 
-The supported resource types in AWS are EKS (via Kubernetes Discovery), S3 Buckets, SNS Topics and SQS Queues.
+The other supported resource types in AWS are EKS (via Kubernetes Discovery), Lambda, SNS Topics and SQS Queues.
 
 
 ### Airflow Dags

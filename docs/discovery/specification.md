@@ -74,6 +74,7 @@ The below table summarises the ways to override for each resource type
 |S3|S3 Object Tags|
 |SNS|SNS Object Tags|
 |SQS|SQS Object Tags|
+|Lambda|Lambda Tags|
 |Kubernetes Workloads|Annotations|
 |Endpoints in Gateway API & Kubernetes|Annotations|
 |Airflow|Tags Array in Dags|
