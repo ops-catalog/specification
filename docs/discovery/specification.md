@@ -72,6 +72,8 @@ The below table summarises the ways to override for each resource type
 |Cassandra|Comments on catalog table in each keyspace|
 |Kafka| None |
 |S3|S3 Object Tags|
+|SNS|SNS Object Tags|
+|SQS|SQS Object Tags|
 |Kubernetes Workloads|Annotations|
 |Endpoints in Gateway API & Kubernetes|Annotations|
 |Airflow|Tags Array in Dags|

@@ -9,7 +9,7 @@ Here is a configuration to retrieve buckets from S3.
 apiVersion: "v1"
 kind: Discovery
 metadata:
-  name: "s3-discovery"
+  name: "aws-discovery"
 
 type: aws 
 instance:
@@ -17,7 +17,7 @@ instance:
     filter:
       excludes: [".*"]
       includes: ["spark.*", "gpg.*", ".*biller", "aws-sts.*"]
-
+      resources: ["s3"]
     includes:
       - internal
       - data-platform
@@ -42,6 +42,9 @@ This is just like any discovery config, the only difference is the region inform
 Discovery annotations can be retrieved from storage resources like S3 buckets.
 
 ![S3 Tags](../assets/images/s3-tags.png)
+
+The supported resource types in AWS are EKS (via Kubernetes Discovery), S3 Buckets, SNS Topics and SQS Queues.
+
 
 ### Airflow Dags
 Airflow Dags discovery requires airflow instance to have REST API enabled.
