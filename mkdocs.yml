@@ -5,10 +5,11 @@ repo_url: "https://github.com/ops-catalog/specification"
 repo_name: "ops-catalog/specification"
 
 nav:
-    - 'What is Ops Catalog': 'index.md'
+    - 'Introduction': 'index.md'
     - 'Problem Statement': 'problems.md'
     - 'Why OCA?': 'whyoca.md'
     - 'Use Cases': 'usecases.md'
+    - 'What is it???': 'whatisit.md'
     - 'Quickstart': 'quickstart.md'
     - 'Ecosystem': 'status.md'
     - 'Specification': 
