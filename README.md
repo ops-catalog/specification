@@ -1,6 +1,7 @@
 # specification
-Open Catalog Specification for CMDB and App like artifacts
-[Docs](https://ops-catalog.github.io/specification/)
+Open Operations Catalog Specification - transforming Dev/DevOps teams into dynamic internal SaaS teams.
+
+[Docs](https://ops-catalog.github.io/)
 
 
 ### Running Locally
