@@ -6,8 +6,9 @@ Inspired by the tale of <a href="https://en.wikipedia.org/wiki/Blind_men_and_an_
 <div>
     <table>
     <tr><th>Here are a few ways to understand what Ops-Catalog is</th></tr>
-    <tr><td>It is a <span class="danger">CMDB but for Developers</span></td></tr>
+    <tr><td>It is a <span class="primary">CMDB but for Developers</span></td></tr>
     <tr><td>It is a <span class="danger">registry for microservices</span></td></tr> 
+    <tr><td>It is a <span class="primary">catalog API for Backstage</span></td></tr>  
     <tr><td>It is a <span class="danger">place to store Deployment Config</span></td></tr> 
     <tr><td>It is a place to <span class="danger">lookup ownership data</span></td></tr> 
     <tr><td>It creates <span class="danger">git repository</span></td></tr>  
@@ -16,7 +17,7 @@ Inspired by the tale of <a href="https://en.wikipedia.org/wiki/Blind_men_and_an_
     <tr><td>Ah so it collects <span class="danger">AWS resources</span></td></tr>
     <tr><td>So it can <span class="danger">provision Kafka topics?</span></td></tr>  
     <tr><td>It is an API server <span class="danger">for listing resources I own</span></td></tr> 
-    <tr><td>It is an <span class="danger"> aggregator to view all resources of the company</span></td></tr>  
+    <tr><td>It is an <span class="primary"> aggregator to view all resources of the company</span></td></tr>  
     </table>
 </div>
 
