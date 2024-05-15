@@ -40,6 +40,8 @@ nav:
     - 'FAQs': 'faqs.md'
     - Issues:
         - 'Tracker': 'https://github.com/ops-catalog/specification/issues'
+    - Download
+        - 'Pdf': '/pdf/document.pdf'
 docs_dir: "docs"
 site_dir: "site"
 
@@ -85,6 +87,7 @@ plugins:
       allow_arbitrary_locations : true
       javascript: ../../assets/js/swagger-ui-bundle.js
       css: ../../assets/css/swagger-ui.css     
+  - with-pdf
 
       
 extra:
