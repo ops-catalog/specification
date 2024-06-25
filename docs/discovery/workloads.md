@@ -28,6 +28,7 @@ instance:
       domain: "platform"
       type: "App"
       capability: "operations"
+      businessUnit: "tech"
 ```
 
 k8s-read performs an encryption on TLS certificates for a public key provided in the request header. The private and public keys can be configured with the option attributes ```secretPrivateKey``` and ```secretPublicKey```

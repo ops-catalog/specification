@@ -262,7 +262,7 @@ The classification node consists of the following attributes:
 | tag        | An array of labels to apply to this catalog item for filtering, search, grouping purpose |
 | domain     | Domain of which this catalog item is a member of                                         | 
 | capability | A specific product capability this catalog item is a part of                             |
-
+| businessUnit | Business Division to which this catalog item belongs |
 
 The table below shows various kind, type and additional attributes associated with each type.
 
@@ -297,6 +297,7 @@ classification:
     domain: "payment"
     team: "paypaynow"
     capability: "onlinebanking"
+    businessUnit: "retail"    
 ```
 
 #### Runtime
@@ -457,6 +458,7 @@ classification:
     domain: ""
     team: ""   
     capability: ""
+    businessUnit: ""
 audit: {}
 ```
 

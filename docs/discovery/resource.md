@@ -25,6 +25,7 @@ instance:
       team: "datahoarders"
       domain: "storage"
       capability: "dataretention"
+      businessUnit: "tech"
     options:
 
       host: "s3.ap-southeast-2.amazonaws.com"
@@ -70,6 +71,7 @@ instance:
       team: "dataplatform"
       domain: "jobs"
       capability: "jobs"
+      businessUnit: "tech"
 ```
 Object level enrichment overrides will be applied from tags array found in Dags API
 
@@ -96,6 +98,7 @@ instance:
       team: "keepers"
       domain: "storage"
       capability: "operations"
+      businessUnit: "tech"
 ```
 
 ### Postgres Schema
@@ -117,6 +120,7 @@ instance:
       domain: "storage"
       type: "Schema"
       capability: "dataretention"
+      businessUnit: "tech"
     options:
       host: "postgres.ops-catalog.io"
       port: "5432"
@@ -177,6 +181,7 @@ instance:
       domain: "storage"
       type: "Keyspace"
       capability: "dataretention"
+      businessUnit: "tech"
 ```
 
 It is not possible to add comment to Cassandra Keyspace. Hence we look for a table called catalog and read its comment if available to perform item level override.
@@ -222,6 +227,7 @@ instance:
       team: "devexp"
       domain: "platform"
       capability: "operations"
+      businessUnit: "tech"
     duplicatesStrategy: "ignore" 
 
   - name: "org-github"
@@ -242,6 +248,7 @@ instance:
       team: "devexp"
       domain: "platform"
       capability: "operations"
+      businessUnit: "tech"
     duplicatesStrategy: "ignore" 
 
 ```
