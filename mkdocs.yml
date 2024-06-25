@@ -40,7 +40,7 @@ nav:
     - 'FAQs': 'faqs.md'
     - Issues:
         - 'Tracker': 'https://github.com/ops-catalog/specification/issues'
-    - Download
+    - Download:
         - 'Pdf': '/pdf/document.pdf'
 docs_dir: "docs"
 site_dir: "site"
