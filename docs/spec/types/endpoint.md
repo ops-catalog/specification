@@ -20,6 +20,7 @@ classification:
     domain: platform
     team: devops
     capability: operations
+    businessUnit: "tech"
 properties: {}
 includes:
     - internal

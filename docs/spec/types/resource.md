@@ -19,6 +19,7 @@ classification:
     domain: "origination"
     team: "loaders"
     capability: "origination"
+    businessUnit: "mybusiness"
 ```
 
 Note, resources can be linked back to the exact provider (eg Storage or other objects) by ```dependencies.providedBy``` attribute.
@@ -50,6 +51,7 @@ classification:
     domain: storage
     team: datahoarders
     capability: dataretention
+    businessUnit: "tech"
 properties:
     lifecycle:
         replication:
@@ -77,6 +79,7 @@ classification:
     domain: platform
     team: devops
     capability: operations
+    businessUnit: "tech"
 properties:
     lifecycle:
         common-name: docs.ops-catalog.io

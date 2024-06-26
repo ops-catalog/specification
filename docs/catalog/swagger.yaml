@@ -351,6 +351,8 @@ components:
           type: string
         capability:
           type: string
+        businessUnit:
+          type: string
 
     Dependencies:
       type: object

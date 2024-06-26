@@ -116,6 +116,7 @@ classification:
     domain: "transaction"
     team: "transaction"
     capability: "onlinebanking"
+    businessUnit: "retail"
 EOF
 ```
 

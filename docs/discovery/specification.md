@@ -55,6 +55,7 @@ instance:
       domain: "storage"
       type: "Topic"
       capability: "operations"
+      businessUnit: "tech"
     duplicatesStrategy: "ignore"
 ```
 

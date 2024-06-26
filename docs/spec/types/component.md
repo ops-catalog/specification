@@ -24,6 +24,7 @@ classification:
     domain: "origination"
     team: "loaders"
     capability: "onboarding"
+    businessUnit: "retail"
 properties:
   dev: 
     quickstart: "./gradlew runApp"
