@@ -58,9 +58,32 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details # For collapsible admonition-style blocks
+  - pymdownx.betterem # For better emphasis handling
+  # - pymdownx.critic # Optional: for diff-like markup, include if desired for future use
+  - pymdownx.caret # For insert ^^ and delete ~~ syntax
+  # - pymdownx.keys # Optional: for keyboard symbols, include if relevant use cases exist
+  - pymdownx.mark # For highlighting text ==mark==
+  # - pymdownx.tilde # Optional: for subscript/superscript, include if relevant
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true # Optional, for a different tab style
+  - pymdownx.tasklist:
+      custom_checkbox: true # For theme-styled checkboxes
+  - pymdownx.magiclink # To auto-link URLs and emails
   - attr_list
   - md_in_html
+  - toc:
+      permalink: true
+      # slugify: !!python/name:pymdownx.slugs.uslugify # Consider if needed
+  - admonition
 
 
 theme:
@@ -78,6 +101,14 @@ theme:
     - navigation.expand
     - navigation.path
     - toc.integrate
+    # New features to add
+    - navigation.top # Adds a "Back to top" button
+    - search.suggest # Enables search suggestions
+    - search.highlight # Highlights search terms on target pages
+    # - content.tabs.link # Add if pymdownx.tabbed is heavily used and cross-linking is desired
+    - content.code.annotate # For adding annotations to code blocks
+    - navigation.footer # Adds previous/next page links in the footer
+    # - navigation.tabs # Optional: if a tabbed top-level navigation is desired instead of sidebar sections for main nav. Evaluate impact.
   font:
     text: Arial
     code: Jetbrains Mono
