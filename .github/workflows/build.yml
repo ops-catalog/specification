@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -12,24 +15,39 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GIT_COMMIT_TOKEN }} 
-          fetch-tags: true
+      - name: Checkout code
+        uses: actions/checkout@v4
+        # fetch-depth: 0 # Recommended by peaceiris/actions-mkdocs-gh-pages if you use git-revision-date-localized plugin
 
-      - uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-      - uses: actions/cache@v3
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
-      - run: pip install mkdocs-material 
-      - run: pip install pymdown-extensions
-      - run: pip install mkdocs-render-swagger-plugin
-      - run: pip install mkdocs-with-pdf
-      - run: mkdocs gh-deploy --force
+          python-version: '3.11' # Using a specific recent version
 
+      - name: Create requirements.txt for MkDocs
+        run: |
+          echo "mkdocs-material>=9.0.0" > requirements.txt
+          echo "pymdown-extensions" >> requirements.txt
+          echo "mkdocs-render-swagger-plugin" >> requirements.txt
+          echo "mkdocs-with-pdf" >> requirements.txt
+          # The following pymdownx extensions are generally included in pymdown-extensions 
+          # or automatically handled by mkdocs-material, so explicit listing is usually not needed:
+          # echo "pymdownx.details" >> requirements.txt
+          # echo "pymdownx.betterem" >> requirements.txt
+          # echo "pymdownx.caret" >> requirements.txt
+          # echo "pymdownx.mark" >> requirements.txt
+          # echo "pymdownx.emoji" >> requirements.txt
+          # echo "pymdownx.tabbed" >> requirements.txt
+          # echo "pymdownx.tasklist" >> requirements.txt
+          # echo "pymdownx.magiclink" >> requirements.txt
+          # echo "pymdownx.superfences" >> requirements.txt
+
+      - name: Deploy with MkDocs Material
+        uses: peaceiris/actions-mkdocs-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          requirements_file: requirements.txt
+          enable_pdf_export: true # Attempts to install WeasyPrint and its dependencies for mkdocs-with-pdf
+          force_push: true # Equivalent to mkdocs gh-deploy --force
+          # deploy_branch: gh-pages # Default is gh-pages
+          # custom_domain: your.custom.domain # If you have one
