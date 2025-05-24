@@ -42,12 +42,16 @@ jobs:
           # echo "pymdownx.magiclink" >> requirements.txt
           # echo "pymdownx.superfences" >> requirements.txt
 
-      - name: Deploy with MkDocs Material
-        uses: peaceiris/actions-mkdocs-gh-pages@v4
+      - name: Build MkDocs site
+        run: |
+          pip install -r requirements.txt
+          mkdocs build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          requirements_file: requirements.txt
-          enable_pdf_export: true # Attempts to install WeasyPrint and its dependencies for mkdocs-with-pdf
+          publish_dir: ./site
           force_push: true # Equivalent to mkdocs gh-deploy --force
           # deploy_branch: gh-pages # Default is gh-pages
           # custom_domain: your.custom.domain # If you have one

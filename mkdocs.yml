@@ -116,8 +116,8 @@ theme:
 plugins:
   - render_swagger:
       allow_arbitrary_locations : true
-      javascript: ../../assets/js/swagger-ui-bundle.js
-      css: ../../assets/css/swagger-ui.css     
+      javascript: assets/js/swagger-ui-bundle.js
+      css: assets/css/swagger-ui.css     
   - with-pdf
 
       
