@@ -2,207 +2,166 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ops-catalog.github.io/specification/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/demo/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/faqs/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/howoca/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/problems/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/quickstart/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/status/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/whatisit/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/whyoca/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/catalog/api/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/catalog/configuration/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/catalog/running/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/discovery/endpoint/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/discovery/resource/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/discovery/specification/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/discovery/workloads/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/examples/deploy/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/examples/my-account/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/fulfillment/specification/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/spec/scorecard/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/spec/structure/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/spec/types/component/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/spec/types/endpoint/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/spec/types/resource/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/spec/types/store/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/spec/types/templates/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/ui/backstage/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/annotations/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/approvals/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/browseorgassets/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/browseteamassets/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/certificates/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/codefactory/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/configmgmt/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/dags/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/dataplatform/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/issueassignment/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/platform/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/template/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
     <url>
          <loc>https://ops-catalog.github.io/specification/usecases/ticketing/</loc>
-         <lastmod>2024-06-26</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-05-24</lastmod>
     </url>
 </urlset>
